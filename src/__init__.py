@@ -1,7 +1,7 @@
 from .py_simple_morse_code import (
     decode_morse_to_string,
     encode_beats_to_waveform,
-    encode_morse_string_to_waveform,
+    encode_morse_to_waveform,
     encode_morse_to_beats,
     encode_string_to_beats,
     encode_string_to_morse,

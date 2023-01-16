@@ -10,7 +10,7 @@ from .py_simple_morse_code import (
     play_string,
     play_morse,
     encode_string_to_waveform,
-    encode_morse_string_to_waveform,
+    encode_morse_to_waveform,
 )
 from .signal_processing import SignalProcessor
 from .CONSTANTS import (

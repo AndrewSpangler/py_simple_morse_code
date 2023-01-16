@@ -217,7 +217,7 @@ def play_waveform(
 
 
 def play_string(
-    in_str: bytes,
+    in_str: str,
     tone: int = DEFAULT_TONE,
     words_per_minute: int = DEFAULT_WORDS_PER_MINUTE,
     sample_rate: int = DEFAULT_SAMPLE_RATE,
@@ -232,7 +232,7 @@ def play_string(
 
 
 def play_morse(
-    morse: bytes,
+    morse: str,
     tone: int = DEFAULT_TONE,
     words_per_minute: int = DEFAULT_WORDS_PER_MINUTE,
     sample_rate: int = DEFAULT_SAMPLE_RATE,
@@ -258,7 +258,7 @@ def encode_string_to_waveform(
     return encode_beats_to_waveform(beats, tone, words_per_minute, sample_rate, verbose)
 
 
-def encode_morse_string_to_waveform(
+def encode_morse_to_waveform(
     morse: str,
     tone: int = DEFAULT_TONE,
     words_per_minute: int = DEFAULT_WORDS_PER_MINUTE,
@@ -272,7 +272,7 @@ def encode_morse_string_to_waveform(
 
 def calculate_beat_duration_from_wpm(words_per_minute: int) -> float:
     """Caclulate beat duration from words per minute. *Returns a float*"""
-    return (1200 / words_per_minute) / 1000
+    return (1200.0 / words_per_minute) / 1000.0
 
 
 class MorseCodeTranslator:
