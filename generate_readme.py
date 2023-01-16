@@ -58,8 +58,11 @@ try:
             "Morse Encoder": "https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/text_to_morse.png",
             "Morse Decoder": "https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/morse_to_text.png",
             "Live Decoder": "https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.png",
-            "Live Decoder In Action": "https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4",
         }
+    )
+    gen.add_paragraph("Live Decoder In Action")
+    gen.add_paragraph(
+        "https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4"
     )
     gen.set_changelog(changelog)
     gen.add_heading_1("About", add_toc=True)

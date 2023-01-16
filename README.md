@@ -6,8 +6,6 @@
 
 ![Live Decoder](https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.png)
 
-![Live Decoder In Action](https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4)
-
 - [About](#mark1)
 - [Installation](#mark2)
 - [GUI Usage](#mark3)
@@ -35,6 +33,10 @@
 	- [0.0.0](#mark25)
 
 ---
+
+Live Decoder In Action
+
+https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4
 
 # About<a name="mark1"></a>[^](#mark0)
 
