@@ -34,14 +34,13 @@
 
 ---
 
+# About<a name="mark1"></a>[^](#mark0)
+
+A python module for interacting with morse code with live decoding feature.
+
 Live Decoder In Action
 
 https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4
-
-# About<a name="mark1"></a>[^](#mark0)
-
-A python module for interacting with morse code
-
 
 # Installation<a name="mark2"></a>[^](#mark0)
 

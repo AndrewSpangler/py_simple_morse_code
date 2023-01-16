@@ -14,7 +14,7 @@ readme = "README.md"
 dynamic = [
     "version",
 ]
-description = "A python module for interacting with morse code\n"
+description = "A python module for interacting with morse code with live decoding feature."
 authors = [
     { name = "Andrew Spangler", email = "AndrewSpangler@users.noreply.github.com" },
 ]
