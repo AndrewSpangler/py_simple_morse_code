@@ -40,7 +40,7 @@ A python module for interacting with morse code with live decoding feature.
 
 Live Decoder In Action
 
-https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4
+<video src="https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4" width=540/>
 
 # Installation<a name="mark2"></a>[^](#mark0)
 

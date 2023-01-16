@@ -65,7 +65,7 @@ try:
     gen.add_paragraph(description)
     gen.add_paragraph("Live Decoder In Action")
     gen.add_paragraph(
-        "https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4"
+        '<video src="https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/live_decoder.mp4" width=540/>'
     )
     gen.add_heading_1("Installation", add_toc=True)
     gen.add_code_block("Run `pip install py_simple_morse_code`")
