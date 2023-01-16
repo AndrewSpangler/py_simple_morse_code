@@ -68,14 +68,14 @@ try:
     )
     gen.add_heading_1("Installation", add_toc=True)
     gen.add_code_block("Run `pip install py_simple_morse_code`")
+    gen.add_heading_1("Requirements", add_toc=True)
+    gen.add_paragraph("\n\n".join(dependencies))
     gen.add_heading_1("GUI Usage", add_toc=True)
     gen.add_paragraph(
         "To launch the gui, install via pip and run `python -m py_simple_morse_code`"
     )
     gen.add_heading_1("Module Usage", add_toc=True)
     gen.add_code_block(example_code)
-    gen.add_heading_1("Requirements", add_toc=True)
-    gen.add_unordered_list(dependencies)
     gen.add_heading_1("Classes", add_toc=True)
     gen.handle_class_list([SignalProcessor, MorseCodeTranslator])
     gen.add_heading_1("Functions", add_toc=True)

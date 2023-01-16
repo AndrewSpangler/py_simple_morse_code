@@ -8,9 +8,9 @@
 
 - [About](#mark1)
 - [Installation](#mark2)
-- [GUI Usage](#mark3)
-- [Module Usage](#mark4)
-- [Requirements](#mark5)
+- [Requirements](#mark3)
+- [GUI Usage](#mark4)
+- [Module Usage](#mark5)
 - [Classes](#mark6)
 	- [SignalProcessor](#mark7)
 	- [MorseCodeTranslator](#mark8)
@@ -45,11 +45,19 @@ Live Decoder In Action: https://raw.githubusercontent.com/AndrewSpangler/py_simp
 ```python
 Run `pip install py_simple_morse_code`
 ```
-# GUI Usage<a name="mark3"></a>[^](#mark0)
+# Requirements<a name="mark3"></a>[^](#mark0)
+
+pyaudio
+
+scipy
+
+numpy
+
+# GUI Usage<a name="mark4"></a>[^](#mark0)
 
 To launch the gui, install via pip and run `python -m py_simple_morse_code`
 
-# Module Usage<a name="mark4"></a>[^](#mark0)
+# Module Usage<a name="mark5"></a>[^](#mark0)
 
 ```python
 from py_simple_morse_code import SignalProcessor, MorseCodeTranslator
@@ -70,11 +78,6 @@ except Exception as e:
     signal_processor.end_session()
     raise e
 ```
-# Requirements<a name="mark5"></a>[^](#mark0)
-
-pyaudio
-scipy
-numpy
 # Classes<a name="mark6"></a>[^](#mark0)
 
 ### SignalProcessor<a name="mark7"></a>[^](#mark6)
