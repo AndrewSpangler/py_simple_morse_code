@@ -37,6 +37,10 @@ try:
     gen.set_changelog(changelog)
     gen.add_heading_1("About", add_toc=True)
     gen.add_paragraph(description)
+    gen.add_heading_1("GUI Usage", add_toc=True)
+    gen.add_paragraph(
+        "Install with `pip install py_simple_morse_code`.\nTo launch the gui run `python -m py_simple_morse_code`"
+    )
     gen.add_heading_1("Requirements", add_toc=True)
     gen.add_unordered_list(dependencies)
     gen.add_heading_1("Classes", add_toc=True)

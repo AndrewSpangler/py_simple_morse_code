@@ -18,14 +18,18 @@ from typing import Callable
 from scipy.io import wavfile
 from .py_simple_morse_code import (
     decode_morse_to_string,
-    DEFAULT_SAMPLE_RATE,
     encode_morse_to_beats,
     encode_string_to_morse,
     encode_string_to_waveform,
     make_morse_visual_from_beats,
     MorseCodeTranslator,
     play_string,
-    SignalProcessor,
+)
+
+from .signal_processing import SignalProcessor
+
+from .CONSTANTS import (
+    DEFAULT_SAMPLE_RATE,
     DEFAULT_WORDS_PER_MINUTE,
 )
 

@@ -32,3 +32,4 @@ from .CONSTANTS import (
     CHAR_TO_MORSE_MAP,
     MORSE_TO_CHAR_MAP,
 )
+from .version import version

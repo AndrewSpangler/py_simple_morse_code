@@ -11,6 +11,7 @@ from .py_simple_morse_code import (
     play_morse,
     play_string,
     play_waveform,
+    version,
     SignalProcessor,
     CHAR_TO_MORSE_MAP,
     DEFAULT_WORDS_PER_MINUTE,

@@ -1,24 +1,26 @@
 # py_simple_morse_code 0.0.1<a name="mark0"></a>
 
 - [About](#mark1)
-- [Requirements](#mark2)
-- [Classes](#mark3)
-	- [SignalProcessor](#mark4)
-	- [MorseCodeTranslator](#mark5)
-- [Functions](#mark6)
-	- [encode_string_to_morse](#mark7)
-	- [encode_string_to_beats](#mark8)
-	- [encode_string_to_waveform](#mark9)
-	- [encode_morse_to_beats](#mark10)
-	- [encode_morse_string_to_waveform](#mark11)
-	- [encode_beats_to_waveform](#mark12)
-	- [decode_morse_to_string](#mark13)
-	- [make_morse_visual_from_beats](#mark14)
-	- [play_morse](#mark15)
-	- [play_string](#mark16)
-	- [play_waveform](#mark17)
-- [Changelog](#mark18)
-	- [0.0.0](#mark19)
+- [GUI Usage](#mark2)
+- [Requirements](#mark3)
+- [Classes](#mark4)
+	- [SignalProcessor](#mark5)
+	- [MorseCodeTranslator](#mark6)
+- [Functions](#mark7)
+	- [encode_string_to_morse](#mark8)
+	- [encode_string_to_beats](#mark9)
+	- [encode_string_to_waveform](#mark10)
+	- [encode_morse_to_beats](#mark11)
+	- [encode_morse_string_to_waveform](#mark12)
+	- [encode_beats_to_waveform](#mark13)
+	- [decode_morse_to_string](#mark14)
+	- [make_morse_visual_from_beats](#mark15)
+	- [play_morse](#mark16)
+	- [play_string](#mark17)
+	- [play_waveform](#mark18)
+- [Changelog](#mark19)
+	- [0.0.0](#mark20)
+	- [0.0.1](#mark21)
 
 ---
 
@@ -27,14 +29,19 @@
 A python module for interacting with morse code
 
 
-# Requirements<a name="mark2"></a>[^](#mark0)
+# GUI Usage<a name="mark2"></a>[^](#mark0)
+
+Install with `pip install py_simple_morse_code`.
+To launch the gui run `python -m py_simple_morse_code`
+
+# Requirements<a name="mark3"></a>[^](#mark0)
 
 pyaudio
 scipy
 numpy
-# Classes<a name="mark3"></a>[^](#mark0)
+# Classes<a name="mark4"></a>[^](#mark0)
 
-### SignalProcessor<a name="mark4"></a>[^](#mark3)
+### SignalProcessor<a name="mark5"></a>[^](#mark4)
 **Non-blocking CW signal processor. The .process() method returns true if a CW tone was found in the signal.**
 
 ```py
@@ -48,7 +55,7 @@ class SignalProcessor(object):
 	def start_session(self) -> None:
 		"""Start the audio stream. *Returns None*"""
 ```
-### MorseCodeTranslator<a name="mark5"></a>[^](#mark3)
+### MorseCodeTranslator<a name="mark6"></a>[^](#mark4)
 **A low-level morse code translator. Inputs should be debounced / sanitized     before being passed to the .update(state:bool) method. Tolerance only affects     word-sep deadbeats to account for hesitation / early resumes between words.**
 
 ```py
@@ -58,90 +65,94 @@ class MorseCodeTranslator(object):
 	def update(self, state: bool) -> None:
 		"""Call this whenever input state changes. Alternatively call this at a set frequency with the current state. *Returns None*"""
 ```
-# Functions<a name="mark6"></a>[^](#mark0)
+# Functions<a name="mark7"></a>[^](#mark0)
 
-### encode_string_to_morse<a name="mark7"></a>[^](#mark6)
+### encode_string_to_morse<a name="mark8"></a>[^](#mark7)
 > **Encodes text to morse code dots and dashes. *Returns a string***
 > 
 ```python
 def encode_string_to_morse(in_str: str, short_char: str = '.', long_char: str = '-', sep_char: str = ' ', replace_on_unknown: bool | str = '?', verbose: bool = True) -> str:
 > 	...
 ```
-### encode_string_to_beats<a name="mark8"></a>[^](#mark6)
+### encode_string_to_beats<a name="mark9"></a>[^](#mark7)
 > **Converts a plaintext string to a beats list. *Returns a list of bools***
 > 
 ```python
 def encode_string_to_beats(in_str: str, verbose: bool = True) -> list:
 > 	...
 ```
-### encode_string_to_waveform<a name="mark9"></a>[^](#mark6)
+### encode_string_to_waveform<a name="mark10"></a>[^](#mark7)
 > **Encode a plaintext string to a waveform. *Returns a float32 1-dimensional numpy array***
 > 
 ```python
 def encode_string_to_waveform(in_str: str, tone: int = 1000, words_per_minute: int = 24, sample_rate: int = 32000, verbose: bool = True) -> numpy.ndarray:
 > 	...
 ```
-### encode_morse_to_beats<a name="mark10"></a>[^](#mark6)
+### encode_morse_to_beats<a name="mark11"></a>[^](#mark7)
 > **Converts dots and dashes to a beats list. *Returns a list of bools***
 > 
 ```python
 def encode_morse_to_beats(morse: str, verbose: bool = True) -> list:
 > 	...
 ```
-### encode_morse_string_to_waveform<a name="mark11"></a>[^](#mark6)
+### encode_morse_string_to_waveform<a name="mark12"></a>[^](#mark7)
 > **Encode a morse string to a waveform. *Returns a float32 1-dimensional numpy array***
 > 
 ```python
 def encode_morse_string_to_waveform(morse: str, tone: int = 1000, words_per_minute: int = 24, sample_rate: int = 32000, verbose: bool = True) -> numpy.ndarray:
 > 	...
 ```
-### encode_beats_to_waveform<a name="mark12"></a>[^](#mark6)
+### encode_beats_to_waveform<a name="mark13"></a>[^](#mark7)
 > **Encode a beats list into a waveform. *Returns a float32 1-dimensional numpy array***
 > 
 ```python
 def encode_beats_to_waveform(beats: list, tone: int = 1000, words_per_minute: int = 24, sample_rate: int = 32000, verbose: bool = True, volume: float = 0.75, deadbeats: int = 0) -> numpy.ndarray:
 > 	...
 ```
-### decode_morse_to_string<a name="mark13"></a>[^](#mark6)
+### decode_morse_to_string<a name="mark14"></a>[^](#mark7)
 > **Decodes morse dots and dashes to plaintext. *Returns a string***
 > 
 ```python
 def decode_morse_to_string(morse: str, char_sep: str = ' ', word_sep: str = '  ', replace_on_unknown: str | bool = '?') -> str:
 > 	...
 ```
-### make_morse_visual_from_beats<a name="mark14"></a>[^](#mark6)
+### make_morse_visual_from_beats<a name="mark15"></a>[^](#mark7)
 > **Converts a beats list to a visual representation in string form     using block chars (unicode char 2588). *Returns a string***
 > 
 ```python
 def make_morse_visual_from_beats(beats: list) -> str:
 > 	...
 ```
-### play_morse<a name="mark15"></a>[^](#mark6)
+### play_morse<a name="mark16"></a>[^](#mark7)
 > **Converts dots and dashes to a waveform and plays it on system speakers. *Returns None***
 > 
 ```python
 def play_morse(morse: bytes, tone: int = 1000, words_per_minute: int = 24, sample_rate: int = 32000, verbose: bool = True) -> None:
 > 	...
 ```
-### play_string<a name="mark16"></a>[^](#mark6)
+### play_string<a name="mark17"></a>[^](#mark7)
 > **Converts plaintext to a waveform and play it on system speakers. *Returns None***
 > 
 ```python
 def play_string(in_str: bytes, tone: int = 1000, words_per_minute: int = 24, sample_rate: int = 32000, verbose: bool = True) -> None:
 > 	...
 ```
-### play_waveform<a name="mark17"></a>[^](#mark6)
+### play_waveform<a name="mark18"></a>[^](#mark7)
 > **Plays a waveform. *Return None***
 > 
 ```python
 def play_waveform(waveform: bytes, format=1, sample_rate=32000) -> None:
 > 	...
 ```
-# Changelog<a name="mark18"></a>[^](#mark0)
+# Changelog<a name="mark19"></a>[^](#mark0)
 
-## 0.0.0<a name="mark19"></a>[^](#mark18)
+## 0.0.0<a name="mark20"></a>[^](#mark19)
 
 Create Project
+
+## 0.0.1<a name="mark21"></a>[^](#mark19)
+
+Fix __main__ module not being included in pip module.
 
 
 
