@@ -1,4 +1,5 @@
 {
+	"0.0.4": "Fix PyPi page links",
 	"0.0.3": "Add example usage and images to readme and clean up typehints",
 	"0.0.2": "Move __main__ module to src/py_simple_morse_code/__main__.py",
 	"0.0.1": "Fix __main__ module not being included in pip module.",

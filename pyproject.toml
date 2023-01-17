@@ -38,10 +38,10 @@ keywords = []
 text = "LICENSE"
 
 [project.urls]
-homepage = "https://GitHub.com/AndrewSpangler/"
-"bug tracker" = "https://GitHub.com/AndrewSpangler/issues"
-documentation = "https://GitHub.com/AndrewSpangler/"
-repository = "https://GitHub.com/AndrewSpangler/"
+homepage = "https://GitHub.com/AndrewSpangler/py_simple_morse_code/"
+"bug tracker" = "https://GitHub.com/AndrewSpangler/py_simple_morse_code/issues"
+documentation = "https://GitHub.com/AndrewSpangler/py_simple_morse_code/"
+repository = "https://GitHub.com/AndrewSpangler/py_simple_morse_code/"
 
 [tool.setuptools.dynamic.version]
 attr = "py_simple_morse_code.version"

@@ -1,4 +1,4 @@
-# py_simple_morse_code 0.0.3<a name="mark0"></a>
+# py_simple_morse_code 0.0.4<a name="mark0"></a>
 
 ![Morse Encoder](https://raw.githubusercontent.com/AndrewSpangler/py_simple_morse_code/main/docu/text_to_morse.png)
 
@@ -27,10 +27,11 @@
 	- [play_string](#mark19)
 	- [play_waveform](#mark20)
 - [Changelog](#mark21)
-	- [0.0.3](#mark22)
-	- [0.0.2](#mark23)
-	- [0.0.1](#mark24)
-	- [0.0.0](#mark25)
+	- [0.0.4](#mark22)
+	- [0.0.3](#mark23)
+	- [0.0.2](#mark24)
+	- [0.0.1](#mark25)
+	- [0.0.0](#mark26)
 
 ---
 
@@ -185,19 +186,23 @@ def play_waveform(waveform: bytes, format=1, sample_rate=32000) -> None:
 ```
 # Changelog<a name="mark21"></a>[^](#mark0)
 
-## 0.0.3<a name="mark22"></a>[^](#mark21)
+## 0.0.4<a name="mark22"></a>[^](#mark21)
+
+Fix PyPi page links
+
+## 0.0.3<a name="mark23"></a>[^](#mark21)
 
 Add example usage and images to readme and clean up typehints
 
-## 0.0.2<a name="mark23"></a>[^](#mark21)
+## 0.0.2<a name="mark24"></a>[^](#mark21)
 
 Move __main__ module to src/py_simple_morse_code/__main__.py
 
-## 0.0.1<a name="mark24"></a>[^](#mark21)
+## 0.0.1<a name="mark25"></a>[^](#mark21)
 
 Fix __main__ module not being included in pip module.
 
-## 0.0.0<a name="mark25"></a>[^](#mark21)
+## 0.0.0<a name="mark26"></a>[^](#mark21)
 
 Create Project
 
